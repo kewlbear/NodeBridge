@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "NodeBridge",
+        "repositoryURL": "https://github.com/kewlbear/NodeBridge.git",
+        "state": {
+          "branch": "main",
+          "revision": "49fa6445d255a312573e9343d11441719a0b1755",
+          "version": null
+        }
+      },
+      {
+        "package": "nodejs-ios",
+        "repositoryURL": "https://github.com/kewlbear/nodejs-ios.git",
+        "state": {
+          "branch": "main",
+          "revision": "d758bcfcb2e7754d218f1fd109976e988704a061",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
