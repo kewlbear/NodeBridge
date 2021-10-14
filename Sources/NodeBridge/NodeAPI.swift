@@ -26,7 +26,7 @@
 import Foundation
 import node_api
 
-extension napi_env {
+public extension napi_env {
     func makeObject() throws -> napi_value? {
         try call { napi_create_object(self, &$0) }
     }
@@ -122,7 +122,7 @@ extension napi_valuetype: CustomStringConvertible {
     }
 }
 
-func check(_ status: napi_status) throws {
+public func check(_ status: napi_status) throws {
     guard status != napi_ok else { return }
     throw status
 }
@@ -185,7 +185,7 @@ public struct Value {
     
     let value: napi_value
     
-    var type: ValueType? {
+    public var type: ValueType? {
         ValueType(rawValue: Int(try! env.type(of: value).rawValue))
     }
     
@@ -268,7 +268,7 @@ extension Value: CustomStringConvertible {
     }
 }
 
-enum ValueType: Int {
+public enum ValueType: Int {
     case undefined
     case null
     case boolean
@@ -282,7 +282,7 @@ enum ValueType: Int {
 }
 
 extension ValueType: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         napi_valuetype(rawValue: UInt32(rawValue)).description
     }
 }
