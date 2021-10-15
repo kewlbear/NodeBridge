@@ -27,6 +27,8 @@ NativeBridge.doSomethingUseful((msg, cb) => {
 });
 ```
 
+For a real world example app, see https://github.com/kewlbear/Inssagram.
+
 ### Swift Package Manager
 
 ```
